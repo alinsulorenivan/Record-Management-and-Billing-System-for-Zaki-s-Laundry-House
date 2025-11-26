@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEEB58FE-F122-4D8E-9533-A40E9238AD44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ZakiLaundryHouse</RootNamespace>
+    <AssemblyName>ZakiLaundryHouse</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\ejode\OneDrive\Desktop\Zaki installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E5278E91ADBF44E982F8BA3A39074245E52C513F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ZakiLaundryHouse_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icoo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=8.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.8.4.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.66\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityLogger.cs" />
+    <Compile Include="BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColoredProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="DataGridViewStyler.cs" />
+    <Compile Include="DbConnection.cs" />
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\dashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\dashboardAdmin.Designer.cs">
+      <DependentUpon>dashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\Data.cs" />
+    <Compile Include="ucAdmin\FormDimmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\FormDimmer.Designer.cs">
+      <DependentUpon>FormDimmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\NewButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\picturebxRounded.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\SearchResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\SearchResultControl.Designer.cs">
+      <DependentUpon>SearchResultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucAddAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucAddAccount.Designer.cs">
+      <DependentUpon>ucAddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucAdminOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucAdminOrders.Designer.cs">
+      <DependentUpon>ucAdminOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucBilling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucBilling.Designer.cs">
+      <DependentUpon>ucBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucCustomers.Designer.cs">
+      <DependentUpon>ucCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucEditPricing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucEditPricing.Designer.cs">
+      <DependentUpon>ucEditPricing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucInventory.Designer.cs">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucInventoryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucInventoryForm.Designer.cs">
+      <DependentUpon>ucInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucLogTrail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucLogTrail.Designer.cs">
+      <DependentUpon>ucLogTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderForm.Designer.cs">
+      <DependentUpon>ucOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderHistory.Designer.cs">
+      <DependentUpon>ucOrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucOrderSummary.Designer.cs">
+      <DependentUpon>ucOrderSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucPaymentForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucPaymentForm.Designer.cs">
+      <DependentUpon>ucPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucPricing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucPricing.Designer.cs">
+      <DependentUpon>ucPricing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucRestock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucRestock.Designer.cs">
+      <DependentUpon>ucRestock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucSales.Designer.cs">
+      <DependentUpon>ucSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucUnpaidOrderSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucUnpaidOrderSummary.Designer.cs">
+      <DependentUpon>ucUnpaidOrderSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAdmin\ucUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucUsers.Designer.cs">
+      <DependentUpon>ucUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucAdmin\ucAdminHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAdmin\ucAdminHome.Designer.cs">
+      <DependentUpon>ucAdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcPanel1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\dashboardAdmin.resx">
+      <DependentUpon>dashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\FormDimmer.resx">
+      <DependentUpon>FormDimmer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\SearchResultControl.resx">
+      <DependentUpon>SearchResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucAddAccount.resx">
+      <DependentUpon>ucAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucAdminOrders.resx">
+      <DependentUpon>ucAdminOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucBilling.resx">
+      <DependentUpon>ucBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucCustomers.resx">
+      <DependentUpon>ucCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucEditPricing.resx">
+      <DependentUpon>ucEditPricing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucInventory.resx">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucInventoryForm.resx">
+      <DependentUpon>ucInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucLogTrail.resx">
+      <DependentUpon>ucLogTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucOrderForm.resx">
+      <DependentUpon>ucOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucOrderHistory.resx">
+      <DependentUpon>ucOrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucOrderSummary.resx">
+      <DependentUpon>ucOrderSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucPaymentForm.resx">
+      <DependentUpon>ucPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucPricing.resx">
+      <DependentUpon>ucPricing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucRestock.resx">
+      <DependentUpon>ucRestock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucSales.resx">
+      <DependentUpon>ucSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucUnpaidOrderSummary.resx">
+      <DependentUpon>ucUnpaidOrderSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucUsers.resx">
+      <DependentUpon>ucUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAdmin\ucAdminHome.resx">
+      <DependentUpon>ucAdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="zaki.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logocrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\namelogs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ediit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logs-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_8345324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_8345328.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompleteOrder_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pending_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotalCustomer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotalOrders_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotalCustomer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOTALCUSTOMERS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TotalOrderss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Updatedd - September 26, 2025 %281%29.zip" />
+    <None Include="Resources\zakilogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zaki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple Minimalist White Purple Welcome Screen Animated Video.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icoo2.ico" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\boss %282%29.png" />
+    <Content Include="Resources\iconDelete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconEdit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>
