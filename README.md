@@ -230,7 +230,7 @@ This system generates **unofficial receipts** intended for transaction acknowled
 
 ## System Workflow
 
-text
+```
 Login
    ↓
 Dashboard
@@ -246,7 +246,7 @@ Receive Payment
 Print Unofficial Receipt
    ↓
 Update Sales & Reports
-
+```
 ---
 
 ## Project Objectives
@@ -263,7 +263,7 @@ Update Sales & Reports
 
 ## Repository Structure
 
-text
+```
 Record-Management-and-Billing-System/
 │
 ├── ZakiLaundryHouse/
@@ -273,7 +273,7 @@ Record-Management-and-Billing-System/
 ├── screenshots/
 ├── README.md
 └── ZakiLaundryHouse.sln
-
+```
 ---
 
 ## Project Highlights
