@@ -1,77 +1,66 @@
 # Record Management and Billing System for Zaki's Laundry House
 
-A desktop-based Record Management and Billing System developed for Zaki's Laundry House to digitalize and automate daily business operations. The system replaces manual logbooks and paper-based transactions with a centralized management system that streamlines order processing, billing, inventory management, customer records, and sales reporting.
+A desktop-based *Record Management and Billing System* developed for *Zaki's Laundry House* to digitalize and automate daily business operations. The system replaces manual logbooks and paper-based transactions with a centralized management system that streamlines customer management, order processing, billing, inventory monitoring, pricing management, and sales reporting.
 
-> Developed as a Capstone Project at STI College Santa Rosa.
-
+Developed as a Capstone Project at **STI College Santa Rosa**.
 ---
 
 ## Overview
 
-Zaki's Laundry House previously relied on manual record-keeping for customer information, orders, billing, inventory, and sales. As the business grew, this process became inefficient, time-consuming, and prone to human error.
+Zaki's Laundry House previously relied on manual record-keeping for customer information, orders, billing, inventory, and sales. As the business expanded, these manual processes became inefficient, time-consuming, and prone to human error.
 
-This system was designed to solve those problems by providing a secure, reliable, and user-friendly desktop application that automates business operations and improves overall productivity.
-
+To address these challenges, this desktop application was developed to automate daily operations, improve record accuracy, simplify billing, and provide organized business reports through a secure and user-friendly interface.
 
 ---
 
 ## Key Features
 
 ### Authentication & User Roles
-
 - Secure login system
 - Role-based access control
-- Admin and Staff accounts
+- Administrator and Staff accounts
 - Activity Log (Audit Trail)
 
 ### Customer Management
-
-- Register customers
+- Register new customers
 - Update customer information
-- View customer history
 - Search customer records
+- View customer transaction history
 
 ### Order Management
-
-- Create laundry orders
-- Manage order status
+- Create and manage laundry orders
+- Update order status
 - View order history
-- Automatic bill generation
+- Automatic billing computation
 
 ### Billing & Payments
-
 - Generate customer invoices
 - Process customer payments
-- Print **unofficial receipts** for completed transactions
-- Track payment status and billing history
+- Print *unofficial receipts*
+- Track billing history and payment status
 
 ### Inventory Management
-
-- Monitor stock levels
-- Add and update inventory
+- Monitor inventory levels
+- Add and update inventory items
 - Low-stock notifications
 - Inventory reports
 
 ### Pricing Management
-
-- Manage service pricing
-- Update laundry service rates
-- View pricing history
+- Manage laundry service pricing
+- Update service rates
+- Organize pricing by service type
 
 ### Sales & Reports
-
 - Daily and monthly sales reports
-- Inventory reports
 - Customer reports
-- User reports
-- Export reports to Excel and PDF
+- Inventory reports
+- Export reports to *Excel* and *PDF*
 
 ### User Management
-
-- Add users
+- Add new users
 - Edit user information
 - Delete users
-- Manage user roles
+- Manage user roles and permissions
 
 ---
 
@@ -84,8 +73,7 @@ This system was designed to solve those problems by providing a secure, reliable
 - Billing & Payment
 - Inventory
 - Pricing
-- Sales
-- Reports
+- Sales Reports
 - User Management
 - Activity Logs
 
@@ -95,49 +83,146 @@ This system was designed to solve those problems by providing a secure, reliable
 
 | Technology | Purpose |
 |------------|---------|
-| C# | Desktop Application |
-| Windows Forms | User Interface |
-| Microsoft SQL Server | Database |
-| Visual Studio | Development IDE |
-| Crystal Reports / Report Generator | Report Generation |
-| .NET Framework | Application Framework |
+| *C#* | Desktop Application Development |
+| *Windows Forms* | User Interface |
+| *Microsoft SQL Server* | Database Management |
+| *Visual Studio* | Development Environment |
+| *Crystal Reports* | Report Generation |
+| *.NET Framework* | Application Framework |
 
 ---
 
 ## Screenshots
 
+<table>
+<tr>
+<td align="center" width="50%">
 
-| Login | Dashboard |
-|-------|-----------|
-| ![](screenshots/login.png) | ![](screenshots/dashboard.png) |
+<img src="screenshots/login.png" width="450">
 
-| Orders | Billing |
-|---------|----------|
-| ![](screenshots/orders.png) | ![](screenshots/billing.png) |
+### Login
 
-| Inventory | Reports |
-|------------|----------|
-| ![](screenshots/inventory.png) | ![](screenshots/reports.png) |
+Secure authentication for administrators and staff.
+
+</td>
+
+<td align="center" width="50%">
+
+<img src="screenshots/dashboard.png" width="450">
+
+### Dashboard
+
+Displays business summary, sales overview, and system statistics.
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+<img src="screenshots/orders.png" width="450">
+
+### Orders
+
+Create, update, and manage customer laundry orders.
+
+</td>
+
+<td align="center">
+
+<img src="screenshots/billing.png" width="450">
+
+### Billing & Payment
+
+Process payments and generate *unofficial receipts*.
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+<img src="screenshots/sales.png" width="450">
+
+### Sales
+
+Generate, filter, and export sales reports to Excel and PDF.
+
+</td>
+
+<td align="center">
+
+<img src="screenshots/inventory.png" width="450">
+
+### Inventory
+
+Monitor stock levels, manage supplies, and receive low-stock alerts.
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+<img src="screenshots/pricing.png" width="450">
+
+### Pricing
+
+Manage laundry service prices and update service rates.
+
+</td>
+
+<td align="center">
+
+<img src="screenshots/customers.png" width="450">
+
+### Customers
+
+Register customers and view their transaction history.
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+<img src="screenshots/users.png" width="450">
+
+### User Management
+
+Manage administrator and staff accounts with role-based access.
+
+</td>
+
+<td align="center">
+
+</td>
+</tr>
+</table>
+
+**Note**
+
+This system generates **unofficial receipts** intended for transaction acknowledgment and internal record-keeping only. It is **not integrated with the Philippine Bureau of Internal Revenue (BIR)** and does **not** issue official receipts.
+
 
 ---
 
 ## User Roles
 
 ### Administrator
-
 - Full system access
 - Manage users
 - Manage inventory
 - Manage pricing
 - Generate reports
 - View sales analytics
+- Monitor activity logs
 
 ### Staff
-
 - Manage customers
 - Process orders
 - Process billing
-- Print receipts
+- Print unofficial receipts
 - View inventory
 - View pricing
 
@@ -145,7 +230,7 @@ This system was designed to solve those problems by providing a secure, reliable
 
 ## System Workflow
 
-```
+text
 Login
    ↓
 Dashboard
@@ -158,52 +243,51 @@ Generate Invoice
    ↓
 Receive Payment
    ↓
-Print Receipt
+Print Unofficial Receipt
    ↓
-Update Reports & Sales
-```
+Update Sales & Reports
 
 ---
 
 ## Project Objectives
 
 - Replace manual record-keeping with a digital solution.
-- Improve billing accuracy.
+- Improve billing accuracy and efficiency.
 - Organize customer information.
-- Monitor inventory efficiently.
-- Generate business reports instantly.
+- Simplify inventory monitoring.
+- Generate reports instantly.
 - Reduce transaction processing time.
-- Secure business data through authentication.
+- Improve overall business productivity.
 
+---
 
 ## Repository Structure
 
-```
+text
 Record-Management-and-Billing-System/
 │
+├── ZakiLaundryHouse/
 ├── Database/
-├── Forms/
-├── Models/
 ├── Reports/
 ├── Resources/
-├── Screenshots/
-├── SQL/
+├── screenshots/
 ├── README.md
-└── RMBS.sln
-```
+└── ZakiLaundryHouse.sln
 
 ---
 
 ## Project Highlights
 
-- Automated billing and payment processing
-- Role-based authentication
-- Inventory monitoring
+- Secure user authentication
 - Customer record management
+- Order processing
+- Billing and payment processing
+- Unofficial receipt generation
+- Inventory monitoring
+- Pricing management
 - Sales reporting
-- Receipt generation
 - Export reports to Excel and PDF
-- User activity logging
+- Activity logging (Audit Trail)
 
 ---
 
@@ -211,13 +295,22 @@ Record-Management-and-Billing-System/
 
 The implementation of the system significantly improved the daily operations of Zaki's Laundry House by:
 
-- Reducing manual recording errors
-- Speeding up customer transactions
-- Improving inventory tracking
-- Organizing customer records
-- Generating accurate reports
-- Enhancing overall operational efficiency
+- Reducing manual record-keeping errors
+- Improving customer transaction speed
+- Organizing customer information efficiently
+- Enhancing inventory monitoring
+- Providing accurate sales reports
+- Increasing overall operational efficiency
+
+---
+
+## Disclaimer
+
+This project was developed *for academic purposes* as a Capstone Project at *STI College Santa Rosa*.
+
+The receipt generated by the system is an *unofficial receipt* intended solely for internal business record-keeping and customer transaction acknowledgment. It is *not* a BIR-accredited official receipt.
+
+---
 
 
-This project was developed for academic purposes as part of a Capstone Project.
-
+---
